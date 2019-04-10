@@ -35,7 +35,7 @@ class SearchViewModel: SearchViewModelInput, SearchViewModelOutput, SearchViewMo
     func fetchQuestions(query: String) {
         
         do {
-            try Networking.fetchQuestions(query: "swift") { (result: Result<[Question]>) in
+            try Networking.fetchQuestions(query: "swift") { (result: Result<Items>) in
                 print(result.description)
             }
         } catch {

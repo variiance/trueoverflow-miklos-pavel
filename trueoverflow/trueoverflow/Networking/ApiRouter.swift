@@ -30,7 +30,7 @@ enum Apirouter: URLRequestConvertible {
     private var path: String {
         switch self {
         case .advancedSearch:
-            return "/search/advanced"
+            return "/search/advanced/"
         }
     }
     

@@ -8,18 +8,22 @@
 
 import UIKit
 
+struct Items: Codable {
+    let items: [Question]
+}
+
 struct Question: Codable {
     
     let tags: [String]
     let owner: Owner
     let isAnswered: Bool
-    let closedDate: TimeInterval
+    let closedDate: TimeInterval?
     let answerCount: Int
     let score: Int
     let lastActivityDate: TimeInterval
     let creationDate: TimeInterval
     let questionId: Int
     let link: String
-    let closedReasion: String
+    let closedReason: String?
     let title: String
 }

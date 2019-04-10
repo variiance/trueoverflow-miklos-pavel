@@ -13,7 +13,6 @@ struct Owner: Codable {
     let reputation: Int
     let userId: Int
     let userType: String
-    let acceptRate: Int
     let profileImage: String
     let displayName: String
     let link: String
