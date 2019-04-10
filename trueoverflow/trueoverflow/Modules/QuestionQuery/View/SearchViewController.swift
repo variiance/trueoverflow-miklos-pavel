@@ -7,14 +7,20 @@
 //
 
 import UIKit
+import Bond
 
 class SearchViewController: UIViewController {
 
+    // MARK: - Outlets
+    
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var resultsTableView: UITableView!
+    
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
-
-
 }
 

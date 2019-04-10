@@ -14,6 +14,7 @@
 		04229EEC225E3FF8007AFBEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04229EEA225E3FF8007AFBEA /* LaunchScreen.storyboard */; };
 		04229EF5225E444E007AFBEA /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04229EF4225E444E007AFBEA /* Networking.swift */; };
 		04229EF7225E4463007AFBEA /* ApiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04229EF6225E4463007AFBEA /* ApiRouter.swift */; };
+		04229EFD225E45A4007AFBEA /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04229EFC225E45A4007AFBEA /* Question.swift */; };
 		4E2A3847A96D5F053DF5AEC5 /* Pods_trueoverflow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46867493245923587BD49CA5 /* Pods_trueoverflow.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		04229EED225E3FF8007AFBEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04229EF4225E444E007AFBEA /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		04229EF6225E4463007AFBEA /* ApiRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRouter.swift; sourceTree = "<group>"; };
+		04229EFC225E45A4007AFBEA /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		1B6CFC0A3F63FCFAE0AB7876 /* Pods-trueoverflow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trueoverflow.debug.xcconfig"; path = "Target Support Files/Pods-trueoverflow/Pods-trueoverflow.debug.xcconfig"; sourceTree = "<group>"; };
 		46867493245923587BD49CA5 /* Pods_trueoverflow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_trueoverflow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		719717151EBA7AFA07EFAEDD /* Pods-trueoverflow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trueoverflow.release.xcconfig"; path = "Target Support Files/Pods-trueoverflow/Pods-trueoverflow.release.xcconfig"; sourceTree = "<group>"; };
@@ -66,8 +68,8 @@
 			isa = PBXGroup;
 			children = (
 				04229EF3225E443D007AFBEA /* Networking */,
+				04229EF8225E457B007AFBEA /* Modules */,
 				04229EE1225E3FF7007AFBEA /* AppDelegate.swift */,
-				04229EE3225E3FF7007AFBEA /* SearchViewController.swift */,
 				04229EE5225E3FF7007AFBEA /* Main.storyboard */,
 				04229EE8225E3FF8007AFBEA /* Assets.xcassets */,
 				04229EEA225E3FF8007AFBEA /* LaunchScreen.storyboard */,
@@ -83,6 +85,39 @@
 				04229EF6225E4463007AFBEA /* ApiRouter.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		04229EF8225E457B007AFBEA /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				04229EF9225E457F007AFBEA /* QuestionQuery */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		04229EF9225E457F007AFBEA /* QuestionQuery */ = {
+			isa = PBXGroup;
+			children = (
+				04229EFB225E459B007AFBEA /* Model */,
+				04229EFA225E4596007AFBEA /* View */,
+			);
+			path = QuestionQuery;
+			sourceTree = "<group>";
+		};
+		04229EFA225E4596007AFBEA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04229EE3225E3FF7007AFBEA /* SearchViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04229EFB225E459B007AFBEA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04229EFC225E45A4007AFBEA /* Question.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		079196496D018BE60403F5D8 /* Pods */ = {
@@ -203,12 +238,18 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-trueoverflow/Pods-trueoverflow-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Bond/Bond.framework",
+				"${BUILT_PRODUCTS_DIR}/Differ/Differ.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveKit/ReactiveKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bond.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differ.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -222,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04229EFD225E45A4007AFBEA /* Question.swift in Sources */,
 				04229EF5225E444E007AFBEA /* Networking.swift in Sources */,
 				04229EF7225E4463007AFBEA /* ApiRouter.swift in Sources */,
 				04229EE4225E3FF7007AFBEA /* SearchViewController.swift in Sources */,
