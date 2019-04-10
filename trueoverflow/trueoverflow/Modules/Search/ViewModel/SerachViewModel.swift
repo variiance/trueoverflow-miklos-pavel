@@ -9,13 +9,14 @@
 import Foundation
 import Bond
 import Alamofire
+import ReactiveKit
 
 protocol SearchViewModelInput {
     func fetchQuestions(query: String)
 }
 
 protocol SearchViewModelOutput {
-    
+    var errorMessage: PublishSubject<String, NoError> { get }
 }
 
 protocol SearchViewModelType {
@@ -30,16 +31,18 @@ class SearchViewModel: SearchViewModelInput, SearchViewModelOutput, SearchViewMo
     var input: SearchViewModelInput { return self }
     var output: SearchViewModelOutput { return self }
     
+    var errorMessage = PublishSubject<String, NoError>()
+    
     // MARK: - Input
     
     func fetchQuestions(query: String) {
         
         do {
-            try Networking.fetchQuestions(query: "swift") { (result: Result<Items>) in
-                print(result.description)
+            try Networking.fetchQuestions(query: "swift") { (result: Alamofire.Result<Items>) in
+                
             }
         } catch {
-            print(error)
+            errorMessage.next("Networking error.")
         }
     }
 }

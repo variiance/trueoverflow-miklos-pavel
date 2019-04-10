@@ -26,7 +26,17 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupBindings()
         viewModel.input.fetchQuestions(query: "swift")
+    }
+}
+
+private extension SearchViewController {
+    
+    func setupBindings() {
+        viewModel.output.errorMessage.bind(to: self) { me, message in
+            
+        }
     }
 }
 
