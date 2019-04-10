@@ -10,7 +10,8 @@ import UIKit
 
 struct Question: Codable {
     
-    let creator: String
+    let tags: [String]
+    let owner: Owner
     let profileImage: Data
     let isAnswered: Bool
     let viewCount: Int

@@ -11,7 +11,12 @@ import Alamofire
 
 class Networking {
     
-    static let decoder = JSONDecoder()
+    static var decoder: JSONDecoder = {
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        
+        return decoder
+    }()
 
     class func fetchQuestions(query: String, completion: @escaping (Result<Question>) -> ()) {
         Alamofire.request(Apirouter.advancedSearch(query: query))

@@ -37,7 +37,12 @@ enum Apirouter: URLRequestConvertible {
     private var parameters: Parameters? {
         switch self {
         case .advancedSearch(let query):
-            return ["q" : query]
+            return [
+                "q" : query,
+                "order" : "desc",
+                "sort" : "activity",
+                "site" : "stackoverflow"
+            ]
         }
     }
     
