@@ -8,21 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		04229EE2225E3FF7007AFBEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04229EE1225E3FF7007AFBEA /* AppDelegate.swift */; };
-		04229EE4225E3FF7007AFBEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04229EE3225E3FF7007AFBEA /* ViewController.swift */; };
+		04229EE4225E3FF7007AFBEA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04229EE3225E3FF7007AFBEA /* SearchViewController.swift */; };
 		04229EE7225E3FF7007AFBEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04229EE5225E3FF7007AFBEA /* Main.storyboard */; };
 		04229EE9225E3FF8007AFBEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04229EE8225E3FF8007AFBEA /* Assets.xcassets */; };
 		04229EEC225E3FF8007AFBEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04229EEA225E3FF8007AFBEA /* LaunchScreen.storyboard */; };
+		04229EF5225E444E007AFBEA /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04229EF4225E444E007AFBEA /* Networking.swift */; };
+		04229EF7225E4463007AFBEA /* ApiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04229EF6225E4463007AFBEA /* ApiRouter.swift */; };
 		4E2A3847A96D5F053DF5AEC5 /* Pods_trueoverflow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46867493245923587BD49CA5 /* Pods_trueoverflow.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		04229EDE225E3FF7007AFBEA /* trueoverflow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trueoverflow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04229EE1225E3FF7007AFBEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		04229EE3225E3FF7007AFBEA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		04229EE3225E3FF7007AFBEA /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		04229EE6225E3FF7007AFBEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04229EE8225E3FF8007AFBEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04229EEB225E3FF8007AFBEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04229EED225E3FF8007AFBEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04229EF4225E444E007AFBEA /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		04229EF6225E4463007AFBEA /* ApiRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRouter.swift; sourceTree = "<group>"; };
 		1B6CFC0A3F63FCFAE0AB7876 /* Pods-trueoverflow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trueoverflow.debug.xcconfig"; path = "Target Support Files/Pods-trueoverflow/Pods-trueoverflow.debug.xcconfig"; sourceTree = "<group>"; };
 		46867493245923587BD49CA5 /* Pods_trueoverflow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_trueoverflow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		719717151EBA7AFA07EFAEDD /* Pods-trueoverflow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trueoverflow.release.xcconfig"; path = "Target Support Files/Pods-trueoverflow/Pods-trueoverflow.release.xcconfig"; sourceTree = "<group>"; };
@@ -61,8 +65,9 @@
 		04229EE0225E3FF7007AFBEA /* trueoverflow */ = {
 			isa = PBXGroup;
 			children = (
+				04229EF3225E443D007AFBEA /* Networking */,
 				04229EE1225E3FF7007AFBEA /* AppDelegate.swift */,
-				04229EE3225E3FF7007AFBEA /* ViewController.swift */,
+				04229EE3225E3FF7007AFBEA /* SearchViewController.swift */,
 				04229EE5225E3FF7007AFBEA /* Main.storyboard */,
 				04229EE8225E3FF8007AFBEA /* Assets.xcassets */,
 				04229EEA225E3FF8007AFBEA /* LaunchScreen.storyboard */,
@@ -71,13 +76,21 @@
 			path = trueoverflow;
 			sourceTree = "<group>";
 		};
+		04229EF3225E443D007AFBEA /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				04229EF4225E444E007AFBEA /* Networking.swift */,
+				04229EF6225E4463007AFBEA /* ApiRouter.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		079196496D018BE60403F5D8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				1B6CFC0A3F63FCFAE0AB7876 /* Pods-trueoverflow.debug.xcconfig */,
 				719717151EBA7AFA07EFAEDD /* Pods-trueoverflow.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -209,7 +222,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04229EE4225E3FF7007AFBEA /* ViewController.swift in Sources */,
+				04229EF5225E444E007AFBEA /* Networking.swift in Sources */,
+				04229EF7225E4463007AFBEA /* ApiRouter.swift in Sources */,
+				04229EE4225E3FF7007AFBEA /* SearchViewController.swift in Sources */,
 				04229EE2225E3FF7007AFBEA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
