@@ -8,6 +8,7 @@
 
 import UIKit
 import Bond
+import Alamofire
 
 class SearchViewController: UIViewController {
 
@@ -21,6 +22,9 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        Networking.fetchQuestions(query: "swift") { (result: Result<Question>) in
+            print(result.description)
+        }
     }
 }
 

@@ -8,10 +8,10 @@
 
 import UIKit
 
-struct Question {
+struct Question: Codable {
     
     let creator: String
-    let profileImage: UIImage
+    let profileImage: Data
     let isAnswered: Bool
     let viewCount: Int
     let answerCount: Int

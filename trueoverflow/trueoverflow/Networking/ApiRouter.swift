@@ -11,7 +11,7 @@ import  Alamofire
 
 enum Apirouter: URLRequestConvertible {
 
-    case question
+    case advancedSearch(query: String)
     
     static private let host = "https://api.stackexchange.com"
     static private let version = "2.2"
@@ -22,27 +22,26 @@ enum Apirouter: URLRequestConvertible {
     
     private var method: HTTPMethod {
         switch self {
-        case .question:
+        case .advancedSearch:
             return .get
         }
     }
     
     private var path: String {
         switch self {
-        case .question:
-            return "/questions"
+        case .advancedSearch:
+            return "/search/advanced"
         }
     }
     
     private var parameters: Parameters? {
         switch self {
-        case .question:
-            return [:]
+        case .advancedSearch(let query):
+            return ["q" : query]
         }
     }
     
     func asURLRequest() throws -> URLRequest {
-        
         let url = try Apirouter.baseUrl.asURL()
         var urlRequest = URLRequest(url: url.appendingPathComponent(path))
         urlRequest.httpMethod = method.rawValue

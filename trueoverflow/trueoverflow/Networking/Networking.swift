@@ -10,9 +10,15 @@ import Foundation
 import Alamofire
 
 class Networking {
+    
+    static let decoder = JSONDecoder()
 
-    class func fetchQuestions(completion: (Swift.Result<Question,NetworkingError>) -> ()) {
-        
+    class func fetchQuestions(query: String, completion: @escaping (Result<Question>) -> ()) {
+        Alamofire.request(Apirouter.advancedSearch(query: query))
+            .responseData { response in
+                let questions: Result<Question> = decoder.decodeResponse(from: response)
+                completion(questions)
+        }
     }
 }
 

@@ -9,5 +9,5 @@
 import Foundation
 
 enum NetworkingError: Error {
-    
+    case parsing(reason: String)
 }
