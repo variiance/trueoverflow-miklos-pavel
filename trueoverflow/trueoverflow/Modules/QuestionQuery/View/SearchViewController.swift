@@ -17,14 +17,16 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var resultsTableView: UITableView!
     
+    // MARK: - Properties
+    
+    var viewModel: SearchViewModelType!
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Networking.fetchQuestions(query: "swift") { (result: Result<Question>) in
-            print(result.description)
-        }
+        
     }
 }
 

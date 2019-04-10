@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		04229EE2225E3FF7007AFBEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04229EE1225E3FF7007AFBEA /* AppDelegate.swift */; };
 		04229EE4225E3FF7007AFBEA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04229EE3225E3FF7007AFBEA /* SearchViewController.swift */; };
-		04229EE7225E3FF7007AFBEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04229EE5225E3FF7007AFBEA /* Main.storyboard */; };
+		04229EE7225E3FF7007AFBEA /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04229EE5225E3FF7007AFBEA /* Search.storyboard */; };
 		04229EE9225E3FF8007AFBEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04229EE8225E3FF8007AFBEA /* Assets.xcassets */; };
 		04229EEC225E3FF8007AFBEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04229EEA225E3FF8007AFBEA /* LaunchScreen.storyboard */; };
 		04229EF5225E444E007AFBEA /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04229EF4225E444E007AFBEA /* Networking.swift */; };
@@ -19,6 +19,9 @@
 		04229F02225E4972007AFBEA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04229F01225E4972007AFBEA /* Constants.swift */; };
 		04229F07225E4FF4007AFBEA /* JSONDecoder+decodeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04229F06225E4FF4007AFBEA /* JSONDecoder+decodeResponse.swift */; };
 		04229F09225E535E007AFBEA /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04229F08225E535E007AFBEA /* Owner.swift */; };
+		04229F0C225E56BF007AFBEA /* SerachViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04229F0B225E56BF007AFBEA /* SerachViewModel.swift */; };
+		04229F0E225E57C0007AFBEA /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04229F0D225E57C0007AFBEA /* AppCoordinator.swift */; };
+		04229F10225E582C007AFBEA /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04229F0F225E582C007AFBEA /* Coordinator.swift */; };
 		4E2A3847A96D5F053DF5AEC5 /* Pods_trueoverflow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46867493245923587BD49CA5 /* Pods_trueoverflow.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +29,7 @@
 		04229EDE225E3FF7007AFBEA /* trueoverflow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trueoverflow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04229EE1225E3FF7007AFBEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04229EE3225E3FF7007AFBEA /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		04229EE6225E3FF7007AFBEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		04229EE6225E3FF7007AFBEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Search.storyboard; sourceTree = "<group>"; };
 		04229EE8225E3FF8007AFBEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04229EEB225E3FF8007AFBEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04229EED225E3FF8007AFBEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -37,6 +40,9 @@
 		04229F01225E4972007AFBEA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		04229F06225E4FF4007AFBEA /* JSONDecoder+decodeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+decodeResponse.swift"; sourceTree = "<group>"; };
 		04229F08225E535E007AFBEA /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
+		04229F0B225E56BF007AFBEA /* SerachViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerachViewModel.swift; sourceTree = "<group>"; };
+		04229F0D225E57C0007AFBEA /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		04229F0F225E582C007AFBEA /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		1B6CFC0A3F63FCFAE0AB7876 /* Pods-trueoverflow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trueoverflow.debug.xcconfig"; path = "Target Support Files/Pods-trueoverflow/Pods-trueoverflow.debug.xcconfig"; sourceTree = "<group>"; };
 		46867493245923587BD49CA5 /* Pods_trueoverflow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_trueoverflow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		719717151EBA7AFA07EFAEDD /* Pods-trueoverflow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trueoverflow.release.xcconfig"; path = "Target Support Files/Pods-trueoverflow/Pods-trueoverflow.release.xcconfig"; sourceTree = "<group>"; };
@@ -80,7 +86,8 @@
 				04229EF3225E443D007AFBEA /* Networking */,
 				04229EF8225E457B007AFBEA /* Modules */,
 				04229EE1225E3FF7007AFBEA /* AppDelegate.swift */,
-				04229EE5225E3FF7007AFBEA /* Main.storyboard */,
+				04229F0D225E57C0007AFBEA /* AppCoordinator.swift */,
+				04229EE5225E3FF7007AFBEA /* Search.storyboard */,
 				04229EE8225E3FF8007AFBEA /* Assets.xcassets */,
 				04229EEA225E3FF8007AFBEA /* LaunchScreen.storyboard */,
 				04229EED225E3FF8007AFBEA /* Info.plist */,
@@ -109,6 +116,7 @@
 		04229EF9225E457F007AFBEA /* QuestionQuery */ = {
 			isa = PBXGroup;
 			children = (
+				04229F0A225E56AD007AFBEA /* ViewModel */,
 				04229EFB225E459B007AFBEA /* Model */,
 				04229EFA225E4596007AFBEA /* View */,
 			);
@@ -136,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				04229F01225E4972007AFBEA /* Constants.swift */,
+				04229F0F225E582C007AFBEA /* Coordinator.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -146,6 +155,14 @@
 				04229F06225E4FF4007AFBEA /* JSONDecoder+decodeResponse.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		04229F0A225E56AD007AFBEA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				04229F0B225E56BF007AFBEA /* SerachViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		079196496D018BE60403F5D8 /* Pods */ = {
@@ -227,7 +244,7 @@
 			files = (
 				04229EEC225E3FF8007AFBEA /* LaunchScreen.storyboard in Resources */,
 				04229EE9225E3FF8007AFBEA /* Assets.xcassets in Resources */,
-				04229EE7225E3FF7007AFBEA /* Main.storyboard in Resources */,
+				04229EE7225E3FF7007AFBEA /* Search.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,12 +308,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04229F0E225E57C0007AFBEA /* AppCoordinator.swift in Sources */,
 				04229EFD225E45A4007AFBEA /* Question.swift in Sources */,
 				04229EF5225E444E007AFBEA /* Networking.swift in Sources */,
 				04229F07225E4FF4007AFBEA /* JSONDecoder+decodeResponse.swift in Sources */,
 				04229EF7225E4463007AFBEA /* ApiRouter.swift in Sources */,
+				04229F0C225E56BF007AFBEA /* SerachViewModel.swift in Sources */,
 				04229F09225E535E007AFBEA /* Owner.swift in Sources */,
 				04229EE4225E3FF7007AFBEA /* SearchViewController.swift in Sources */,
+				04229F10225E582C007AFBEA /* Coordinator.swift in Sources */,
 				04229F02225E4972007AFBEA /* Constants.swift in Sources */,
 				04229EFF225E462B007AFBEA /* NetworkingError.swift in Sources */,
 				04229EE2225E3FF7007AFBEA /* AppDelegate.swift in Sources */,
@@ -306,12 +326,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		04229EE5225E3FF7007AFBEA /* Main.storyboard */ = {
+		04229EE5225E3FF7007AFBEA /* Search.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				04229EE6225E3FF7007AFBEA /* Base */,
 			);
-			name = Main.storyboard;
+			name = Search.storyboard;
 			sourceTree = "<group>";
 		};
 		04229EEA225E3FF8007AFBEA /* LaunchScreen.storyboard */ = {

@@ -17,7 +17,7 @@ enum Apirouter: URLRequestConvertible {
     static private let version = "2.2"
     
     static private var baseUrl: String {
-        return host + version
+        return "\(host)/\(version)/"
     }
     
     private var method: HTTPMethod {

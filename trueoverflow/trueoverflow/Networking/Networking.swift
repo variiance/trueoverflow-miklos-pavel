@@ -18,10 +18,10 @@ class Networking {
         return decoder
     }()
 
-    class func fetchQuestions(query: String, completion: @escaping (Result<Question>) -> ()) {
+    class func fetchQuestions(query: String, completion: @escaping (Result<[Question]>) -> ()) {
         Alamofire.request(Apirouter.advancedSearch(query: query))
             .responseData { response in
-                let questions: Result<Question> = decoder.decodeResponse(from: response)
+                let questions: Result<[Question]> = decoder.decodeResponse(from: response)
                 completion(questions)
         }
     }

@@ -12,10 +12,14 @@ struct Question: Codable {
     
     let tags: [String]
     let owner: Owner
-    let profileImage: Data
     let isAnswered: Bool
-    let viewCount: Int
+    let closedDate: TimeInterval
     let answerCount: Int
     let score: Int
-    let date: TimeInterval
+    let lastActivityDate: TimeInterval
+    let creationDate: TimeInterval
+    let questionId: Int
+    let link: String
+    let closedReasion: String
+    let title: String
 }
