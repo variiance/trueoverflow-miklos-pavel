@@ -17,7 +17,7 @@ enum Apirouter: URLRequestConvertible {
     static private let version = "2.2"
     
     static private var baseUrl: String {
-        return "\(host)/\(version)/"
+        return "\(host)/\(version)"
     }
     
     private var method: HTTPMethod {
@@ -34,30 +34,18 @@ enum Apirouter: URLRequestConvertible {
         }
     }
     
-    private var parameters: Parameters? {
+    private var parameters: String {
         switch self {
         case .advancedSearch(let query):
-            return [
-                "q" : query,
-                "order" : "desc",
-                "sort" : "activity",
-                "site" : "stackoverflow"
-            ]
+               return "?q=\(query)&order=desc&sort=activity&site=stackoverflow"
         }
     }
     
     func asURLRequest() throws -> URLRequest {
-        let url = try Apirouter.baseUrl.asURL()
+    
+        let url = try (Apirouter.baseUrl + parameters).asURL()
         var urlRequest = URLRequest(url: url.appendingPathComponent(path))
         urlRequest.httpMethod = method.rawValue
-        
-        if let parameters = parameters {
-            do {
-                urlRequest.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: [])
-            } catch {
-                throw AFError.parameterEncodingFailed(reason: .jsonEncodingFailed(error: error))
-            }
-        }
         
         return urlRequest
     }

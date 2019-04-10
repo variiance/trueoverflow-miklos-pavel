@@ -33,8 +33,13 @@ class SearchViewModel: SearchViewModelInput, SearchViewModelOutput, SearchViewMo
     // MARK: - Input
     
     func fetchQuestions(query: String) {
-        Networking.fetchQuestions(query: "swift") { (result: Result<[Question]>) in
-            print(result.description)
+        
+        do {
+            try Networking.fetchQuestions(query: "swift") { (result: Result<[Question]>) in
+                print(result.description)
+            }
+        } catch {
+            print(error)
         }
     }
 }

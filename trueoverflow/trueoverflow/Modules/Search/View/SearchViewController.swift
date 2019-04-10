@@ -26,7 +26,7 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        viewModel.input.fetchQuestions(query: "swift")
     }
 }
 

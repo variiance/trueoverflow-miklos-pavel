@@ -108,19 +108,19 @@
 		04229EF8225E457B007AFBEA /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				04229EF9225E457F007AFBEA /* QuestionQuery */,
+				04229EF9225E457F007AFBEA /* Search */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		04229EF9225E457F007AFBEA /* QuestionQuery */ = {
+		04229EF9225E457F007AFBEA /* Search */ = {
 			isa = PBXGroup;
 			children = (
 				04229F0A225E56AD007AFBEA /* ViewModel */,
 				04229EFB225E459B007AFBEA /* Model */,
 				04229EFA225E4596007AFBEA /* View */,
 			);
-			path = QuestionQuery;
+			path = Search;
 			sourceTree = "<group>";
 		};
 		04229EFA225E4596007AFBEA /* View */ = {
