@@ -11,8 +11,8 @@ import Alamofire
 
 class Networking {
 
-//    class func fetchQuestions(completion: ) {
-//        
-//    }
+    class func fetchQuestions(completion: (Swift.Result<Question,NetworkingError>) -> ()) {
+        
+    }
 }
 
